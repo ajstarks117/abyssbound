@@ -50,3 +50,7 @@ Play the opening, then read the starting-room tablet. Enter a combat room and de
 Phaser 3 Arcade Physics, JavaScript modules, Vite and Web Audio power the game. The original title and story illustrations ship locally alongside runtime-generated pixel art and synthesized music. Run `npm test` for the logic suite and `npm run test:browser` for Chrome gameplay checks. The test scripts default to the Windows Chrome installation. Run `npm run build` for a production copy in dist, then `npm run preview` to play that build over HTTP.
 
 The controls target desktop keyboard and mouse. Run progress lasts for the active session. Captions and music carry the story. See DEVELOPMENT_STATUS.md for measured performance and balance limits.
+
+## GitHub Pages
+
+Source is on the main branch. Pages serves the prebuilt game from the root of the gh-pages branch. To prepare a release, run `npm ci`, `npm test`, and `npm run build -- --base=./`. Publish the contents of dist with an empty .nojekyll file to gh-pages. The relative asset paths allow the game to run under /abyssbound/.
